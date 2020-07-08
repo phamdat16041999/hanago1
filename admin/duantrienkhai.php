@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>Home - Brand</title>
+	<title>Quản lý dự án triển khai</title>
+	<link rel="icon" href="../img/Logo.png" type="image/icon type">
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
 
@@ -30,7 +31,7 @@
 </style>
 <body ng-app="myApp" ng-controller="namesCtrl">
 	<?php 
-	include 'menutop.php';
+	include 'menuTop.php';
 	include 'connect.php';
 	?>
 	<?php 
@@ -71,23 +72,23 @@
 											<td class="tdduan" style="width: 40%;">Đường dẫn ảnh</td>
 											<td colspan="2" class="tdduan" style="width: 20%;">Action</td>
 										</tr>
-				<?php 
-				$sql = "Select * from duantrienkhai";
-				$cats = query($sql);
-				$myJSON=json_encode($cats);  
-				?>
-				<script>
-					angular.module('myApp', []).controller('namesCtrl', function($scope) {
-						$scope.names = <?=$myJSON?>
-					});
-				</script>
+										<?php 
+										
+										$sql = "Select * from duantrienkhai";
+										$cats = query($sql);
+										for($i=0; $i<count($cats); $i++)
+										{
+											?>
 											<tr class="trduan" ng-repeat="x in names | filter : first">
-												<td class="tdduan"><div>{{ x[3] }}</div> </td>
-												<td class="tdduan"><div>{{ x[1] }}</div></td>
-												<td class="tdduan"><textarea style="width: 100%;">{{ x[2] }}</textarea></td>
-												<td class="tdduan"><a href="updateduantrienkhai.php?id={{ x[0] }}" title="" style="font-size: 20px; color: #e74c3c; background-color: #ecf0f1"><b>Update</b></a></td>
-												<td class="tdduan"><a href="duantrienkhai.php?id={{ x[0] }}" title="" style="font-size: 20px; color: #e74c3c; background-color: #ecf0f1"><b>Delete</b></a></td>
+												<td class="tdduan"><div><?=$cats[$i][3]?></div> </td>
+												<td class="tdduan"><div><?=$cats[$i][1]?></div></td>
+												<td class="tdduan"><textarea style="width: 100%;"><?=$cats[$i][2]?></textarea></td>
+												<td class="tdduan"><a href="updateduantrienkhai.php?id=<?=$cats[$i][0]?>" title="" style="font-size: 20px; color: #e74c3c; background-color: #ecf0f1"><b>Update</b></a></td>
+												<td class="tdduan"><a href="duantrienkhai.php?id=<?=$cats[$i][0]?>" title="" style="font-size: 20px; color: #e74c3c; background-color: #ecf0f1"><b>Delete</b></a></td>
 											</tr>
+											<?php 
+										}
+										?>
 
 									</table>
 								</form>

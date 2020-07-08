@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>Home - Brand</title>
+	<title>Quản lý tài khoản</title>
+	<link rel="icon" href="../img/Logo.png" type="image/icon type">
 	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
 
@@ -30,7 +31,7 @@
 </style>
 <body ng-app="myApp" ng-controller="namesCtrl">
 	<?php 
-	include 'menutop.php';
+	include 'menuTop.php';
 	include 'connect.php';
 	?>
 	<?php 

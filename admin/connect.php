@@ -1,8 +1,10 @@
 <?php
 $servername = "localhost";
-$database = "hanagovi_Hanago";
+$dbname = "hanagovi_Hanago";
 $username = "hanagovi_hanagovi";
 $password = "phamhuy83nguyentuan";
+
+// Create connection
 
 function query($sql)
 {

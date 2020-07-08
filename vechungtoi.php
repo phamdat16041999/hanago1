@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Về chúng tôi</title>
+	<link rel="icon" href="img/Logo.png" type="image/icon type">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -44,8 +45,8 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12">						
 						<div class="topnav" id="myTopnav">
-							<a href="index.php" class="active">Trang chủ</a>
-							<a href="vechungtoi.php">Về chúng tôi</a>
+							<a href="index.php">Trang chủ</a>
+							<a href="vechungtoi.php" class="active">Về chúng tôi</a>
 							<a href="lienhe.php">Liên Hệ</a>
 							<a href="login.php">Quản trị viên</a>
 							<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-	<title></title>
+	<title>Đăng nhập</title>
+	<link rel="icon" href="img/Logo.png" type="image/icon type">
 
 	<style type="text/css" media="screen">
 		.parent {

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title></title>
+	<title>Liên hệ</title>
+	<link rel="icon" href="img/Logo.png" type="image/icon type">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -40,9 +41,25 @@
 			<div class="col-lg-9 col-md-9" id="boderright">
 				<div>
 
-					<?php 
-					include 'menuTop.php';
-					?>
+		<div class="topnav" id="myTopnav">
+			<a href="index.php">Trang chủ</a>
+			<a href="vechungtoi.php">Về chúng tôi</a>
+			<a href="lienhe.php" class="active">Liên hệ</a> 
+			<a href="login.php">Quản trị viên</a>
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+
+
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+		</script>
 
 
 				</div>	
@@ -127,6 +144,9 @@
 							$tieude=$_POST['tieude'];
 							$noidung=$_POST['noidung'];
 							$ngaygui=$_POST['ngaygui'];
+							date_default_timezone_set('Asia/Ho_Chi_Minh');
+							$month = date('m', time());
+
 							$hoten = strip_tags($hoten);
 							$hoten = addslashes($hoten);
 							$diachi = strip_tags($diachi);
@@ -143,6 +163,8 @@
 							$noidung = addslashes($noidung);
 							$ngaygui = strip_tags($ngaygui);
 							$ngaygui = addslashes($ngaygui);
+							$month = strip_tags($month);
+							$month = addslashes($month);
 							if (($hoten==null)or($diachi==null)or($phone==null)or($email==null)or($mucdichgui==null)or($tieude==null)or($noidung==null)) {
 								?>
 								<div style="width: 100%; text-align: center; font-size: 20px; color:#ecf0f1">
@@ -151,7 +173,7 @@
 								<?php 
 							}
 							else{
-								$add= "insert into contact(hoten, diachi, dienthoai, email, mucdichgui, tieudegui, noidung, ngay) values ('".$hoten."', '".$diachi."','".$phone."', '".$email."', '".$mucdichgui."','".$tieude."', '".$noidung."','".$ngaygui."')";
+								$add= "insert into contact(hoten, diachi, dienthoai, email, mucdichgui, tieudegui, noidung, ngay, month) values ('".$hoten."', '".$diachi."','".$phone."', '".$email."', '".$mucdichgui."','".$tieude."', '".$noidung."','".$ngaygui."','".$month."')";
 								$ra=execsql($add);
 								if($ra!= null){
 									?>

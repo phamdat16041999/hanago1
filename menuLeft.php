@@ -74,9 +74,6 @@
 							<li><a href="dichvu.php?name=dichvu3.png" title="" class="textContent">- Thi công công trình hạ tầng kỹ thuật</a></li>
 							<li><a href="dichvu.php?name=dichvu4.png" title="" class="textContent">- Tư vấn giám sát công trình dân dụng, công nghiệp</a></li>
 							<li><a href="dichvu.php?name=dichvu5.png" title="" class="textContent">- Tư vấn giám sát công trình giao thông, Thủy Lợi</a></li>
-							<li><a href="dichvu.php?name=dichvu6.png" title="" class="textContent">- Tư vấn giám sát công trình hạ tầng kỹ thuật</a></li>
-							<li><a href="dichvu.php?name=dichvu7.png" title="" class="textContent">- Lập dự án đầu tư xây dựng công trình</a></li>
-							<li><a href="dichvu.php?name=dichvu8.png" title="" class="textContent">- Quản lý dự án công trình xây dựng</a></li>
 						</ul>
 					</li>
 					<li class="list" id="btnService"><a href="duantrienkhai.php" class="heading">Dự án triển khai</a>

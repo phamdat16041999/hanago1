@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Hanago</title>
+	<link rel="icon" href="img/Logo.png" type="image/icon type">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -35,6 +36,28 @@
 	<?php 
 	include 'connect.php';
 	?>
+
+	<?php 
+	date_default_timezone_set('Asia/Ho_Chi_Minh');
+	$month = date('m', time());
+	if($month == 1){
+		$month = 11;
+		$sql="delete from contact where month='".$month."'";
+		$rs=execsql($sql);
+	}
+	if($month == 2){
+		$month = 12;
+		$sql="delete from contact where month='".$month."'";
+		$rs=execsql($sql);
+	}
+	else{
+		$month = $month - 2;
+		$sql="delete from contact where month='".$month."'";
+		$rs=execsql($sql);
+	}
+
+	?>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-2">

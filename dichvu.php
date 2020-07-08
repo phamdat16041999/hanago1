@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Dịch vụ</title>
+	<link rel="icon" href="img/Logo.png" type="image/icon type">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -47,7 +48,7 @@
 					<?php 
 						$name=$_GET['name'];
 					 ?>
-					 <img src="img/dichvu/<?=$name?>" alt="">
+					 <img src="img/dichvu/<?=$name?>" alt="" style="width: 100%; height: auto;">
 					
 						
 				</div>
